@@ -278,4 +278,4 @@ class HealthClaimPage:
 
         alert = self.wait.until(lambda d: d.switch_to.alert)
         alert.accept()
-        time.sleep(2)
+        

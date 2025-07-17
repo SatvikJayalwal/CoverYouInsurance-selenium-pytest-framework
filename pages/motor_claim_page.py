@@ -359,7 +359,7 @@ class MotorClaimPage:
         # Step 7: Submit Preferred Workshop form
         safe_click(self.driver, lambda d: d.find_element(By.ID, "update-claim-workshop-details-model-form-submit-btn"))
         print("✓ Preferred Workshop Details filled and submitted.")
-        time.sleep(2)
+        
 
 
 

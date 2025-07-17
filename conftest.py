@@ -1,3 +1,4 @@
+import time
 import pytest
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -10,6 +11,7 @@ def driver():
     options.add_argument("--incognito")
     driver = webdriver.Chrome(options=options)
     yield driver
+    time.sleep(2)
     driver.quit()   
 
 @pytest.fixture
