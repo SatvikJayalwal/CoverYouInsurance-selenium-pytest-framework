@@ -330,7 +330,7 @@ class HOSPITALPIClaimPage:
 
         # 5. Upload Claim Document
         claim_doc_input = self.wait.until(EC.presence_of_element_located((By.XPATH, "//input[@id='claim_issue_doc_id']")))
-        claim_doc_input.send_keys("C:\\Users\\HP\\OneDrive\\Desktop\\test_image.jpg")
+        claim_doc_input.send_keys("C:\\python_codes\\CoverYouAutomation\\images\\test_image.jpg")
         print("✓ Claim document uploaded")
 
         # 6. Submit the form

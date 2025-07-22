@@ -3,7 +3,7 @@ from pages.hospital_pi_claim_page import HOSPITALPIClaimPage
 import traceback
 
 
-def test_dpi_claim(driver, wait):
+def test_hospital_pi_claim(driver, wait):
     login = LoginPage(driver, wait)
     hospital_pi_page = HOSPITALPIClaimPage(driver, wait)
 

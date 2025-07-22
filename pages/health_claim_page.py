@@ -257,8 +257,8 @@ class HealthClaimPage:
         safe_click(self.driver, lambda d: d.find_element(By.XPATH, "//div[@id='tabAssesment']//a[contains(text(),'Update Details')]"))
         time.sleep(1)
 
-        self.driver.find_element(By.ID, "health_claim_requested_claim_amount_id").send_keys("150000")
-        self.driver.find_element(By.ID, "health_claim_approved_claim_amount_id").send_keys("125000")
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "//input[@id='health_claim_requested_claim_amount_id']"))).send_keys("150000")       
+        self.driver.find_element(By.XPATH, "//input[@id='health_claim_approved_claim_amount_id']").send_keys("125000")
 
         date_input = self.driver.find_element(By.ID, "health_claim_app_rej_date_id")
         self.driver.execute_script("arguments[0].removeAttribute('readonly')", date_input)
